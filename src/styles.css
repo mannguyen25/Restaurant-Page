@@ -6,6 +6,7 @@
   /* 2. Remove default margin */
   * {
     margin: 0;
+    padding: 0;
   }
   
   body {
@@ -44,4 +45,130 @@
   */
   #root, #__next {
     isolation: isolate;
+  }
+
+  body {
+    /* variables */
+    --primary-color: #C1CFA1;
+    --secondary-color: #B17F59;
+    --contrast-color: #A5B68D;
+    --tertiary-color: #EDE8DC;
+    --font-color: #333;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--tertiary-color);
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    header {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    header {
+      padding: 1rem 2rem;
+    }
+  }
+  header {
+    display: flex;
+    background-color: var(--primary-color);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+    & img{
+      width: 50px;
+      height: 50px;
+    }
+  }
+  nav{
+    width: 100%;
+    & ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    & li {
+      height: 50px;
+      & button {
+        height: 100%;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        transition: background-color ease-in  0.4s;
+      }
+      &:first-child{
+        margin-right: auto;
+      }
+      &:not(:first-child){
+        & button:hover{
+          background-color: var(--contrast-color);
+        }
+      }
+    }
+  }
+  #menuBtn{
+    display: none;
+  }
+
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    z-index: 999;
+    padding: 1rem 0;
+    background-color: var(--primary-color);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    & li{
+      width: 100%;
+    }
+    & button{
+      width: 100%;
+    }
+    &:first-child{
+      & button:hover{
+        background-color: var(--contrast-color);
+      }
+    }
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+  @media(max-width:800px) {
+    header {
+      padding: 1rem;
+    }
+    .hideOnMobile {
+      display: none;
+    }
+    #menuBtn{
+      display: block;
+    }
+  }
+
+  @media(max-width:400px){
+    .sidebar {
+      font-size: 2rem;
+      width: 100%;
+      justify-content: flex-end;
+      gap: 2rem;
+      & button {
+        justify-content: center;
+      }
+    }
   }

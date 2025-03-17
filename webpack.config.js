@@ -21,6 +21,10 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
     ],
   },
   devtool: "eval-source-map",
@@ -30,5 +34,7 @@ module.exports = {
     },
     compress: true,
     port: 9000,
+    open: true,
+    hot: true,
   },
 };
