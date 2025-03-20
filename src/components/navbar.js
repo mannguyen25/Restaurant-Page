@@ -1,3 +1,5 @@
+import '../styles/navbar.css';
+
 const showSidebar = (sidebar) => {
     sidebar.style.display = 'flex';
 }
