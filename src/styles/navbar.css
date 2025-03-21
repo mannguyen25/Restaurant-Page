@@ -35,6 +35,9 @@ header {
         }
       }
     }
+    & button {
+      cursor: pointer;
+    }
   }
   #menuBtn{
     display: none;
