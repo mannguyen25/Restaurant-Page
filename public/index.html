@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="96x96" rel="icon" href="../src/images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -13,10 +14,10 @@
     <header>
         <nav>
             <ul class="sidebar">
-                <li><button type="button">Home</button></li>
-                <li><button type="button">Menu</button></li>
-                <li><button type="button">About</button></li>
-                <li><button type="button">Contact</button></li>
+                <li><button type="button" class="nav-btn" id="home-sidebar">Home</button></li>
+                <li><button type="button" class="nav-btn" id="menu-sidebar">Menu</button></li>
+                <li><button type="button" class="nav-btn" id="about-sidebar">About</button></li>
+                <li><button type="button" class="nav-btn" id="contact-sidebar">Contact</button></li>
                 <li><button type="button" id="closeMenuBtn">
                     <span class="material-symbols-outlined">
                         close
@@ -24,14 +25,12 @@
                 </button>
             </ul>
             <ul>
-                <li><button type="button">
-                    <div class="logo">
-                        <img src="../src/images/logo.png" alt="Hocaa Bubble Tea Logo">
-                    </div>
+                <li><button type="button" class="nav-btn" id="home">
+                    <img src="../src/images/logo.png" alt="Hocaa Bubble Tea Logo">
                 </button></li>
-                <li class="hideOnMobile"><button type="button">Menu</button></li>
-                <li class="hideOnMobile"><button type="button">About</button></li>
-                <li class="hideOnMobile"><button type="button">Contact</button></li>
+                <li class="hideOnMobile"><button type="button" class="nav-btn" id="menu">Menu</button></li>
+                <li class="hideOnMobile"><button type="button" class="nav-btn" id="about">About</button></li>
+                <li class="hideOnMobile"><button type="button" class="nav-btn" id="contact">Contact</button></li>
                 <li><button type="button" id="menuBtn">
                     <span class="material-symbols-outlined">
                         menu

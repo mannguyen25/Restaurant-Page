@@ -60,6 +60,8 @@
     font-family: "Funnel Sans", sans-serif;
     font-optical-sizing: auto;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
   }
 
   @media only screen and (max-width: 480px) {
@@ -72,4 +74,10 @@
     header {
       padding: 1rem 2rem;
     }
+  }
+
+  #content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
   }

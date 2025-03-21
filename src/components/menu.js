@@ -62,15 +62,8 @@ const Menu = (content) => {
         collaspableBtn.addEventListener('click', () => {
             // when collapse is clicked we rotate icon and collapse menu using height
             collapseIcon.classList.toggle('rotate');
-            if (!cardsContainer.classList.contains('collapsed')) {
-                cardsContainer.style.height = `${cardsContainer.scrollHeight}px`; // Ensures the height matches content height before collapsing
-                setTimeout(() => (cardsContainer.style.height = '0'), 0);
-            } else {
-            cardsContainer.style.height = `${cardsContainer.scrollHeight}px`;
-            setTimeout(() => (cardsContainer.style.height = 'auto'), 300); // After transition, set to auto for dynamic content
-            }
             cardsContainer.classList.toggle('collapsed');
-            });
+        });
         menu.appendChild(section);
     };
 

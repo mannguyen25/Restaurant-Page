@@ -46,16 +46,17 @@ header {
   .sidebar{
     position: fixed;
     top: 0;
-    right: 0;
-    width: 50vw;
+    right: -50px;
+    width: 0;
     height: 100vh;
     z-index: 999;
     padding: 1rem 0;
     background-color: var(--primary-color);
     box-shadow: -10px 0 10px rgba(0,0,0,0.2);
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    transition: width 0.2s linear;
     & li{
       width: 100%;
     }
@@ -92,7 +93,6 @@ header {
   @media(max-width:400px){
     .sidebar {
       font-size: 2rem;
-      width: 100%;
       justify-content: flex-end;
       gap: 2rem;
       & button {
